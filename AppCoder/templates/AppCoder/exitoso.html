@@ -1,0 +1,18 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Se realizo con exito el proceso</h1>
+<P>----------------------------------</P>
+<form action="{% url 'inicio' %}" method="GET"> 
+    <input class="text-center" type="submit" value="Inicio">
+
+<p class="text-center text-white"> {{  mensaje  }} </p>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h2>Formulario de Busqueda de Cliente <br> </h2>
+
+<form action="{% url 'buscar' %}" method="GET"> 
+
+    <input title="Nombre Cliente" type="text" name="cliente" id="cliente">
+
+    <input type="submit" value="buscar cliente">
+
+</form>
+{{ mensaje }}
+
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+<h1 class="mb-5">RESULTADOS DE LA BUSQUEDA <br> </h1>
+
+{% if clientes %}
+<h2 class="text-center text-white">
+    {% for clientes in clientes %}
+        Cliente: {{ clientes.cliente }} <br> Estado: {{ clientes.estado }}
+    {% endfor %}
+</h2>
+
+{% else %}
+
+<h2 class="text-center"> NO HAY CLIENTES CON ESE NOMBRE...</h2>
+
+{% endif %}
+{% endblock %}
+
+
+
+{% block contenido_que_cambia %}
+
+
+
+{% endblock %}
