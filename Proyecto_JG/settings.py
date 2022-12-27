@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "AppCoder",
+    "AppMaster",
 ]
 
 MIDDLEWARE = [
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "AnteProyecto_JG.urls"
+ROOT_URLCONF = "Proyecto_JG.urls"
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "AnteProyecto_JG.wsgi.application"
+WSGI_APPLICATION = "Proyecto_JG.wsgi.application"
 
 
 # Database

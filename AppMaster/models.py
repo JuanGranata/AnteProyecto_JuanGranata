@@ -3,13 +3,10 @@ from django.db import models
 # Create your models here.
 # Creacion de modelos para la base de datos
 
-class Empleado(models.Model):
+class Usuario(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
-    fecha_nac = models.DateField()
-    dni = models.IntegerField()
     email = models.EmailField()
-    cargo = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nombre+" "+self.apellido
@@ -30,3 +27,10 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.cliente+" "+self.estado
+
+class Avatar(models.Model):
+    imagen=models.ImageField(upload_to='avatares')
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user} - {self.imagen}"
