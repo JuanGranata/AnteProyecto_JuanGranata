@@ -43,18 +43,18 @@ def emple_form(request):
     return render (request, "AppMaster/empleado.html", {"form":formulario})
 
 # Modulo carga de clientes
-def cli_form(request):
+def usu_form(request):
     if request.method=="POST":
-        form=CliForm(request.POST)
+        form=UsuForm(request.POST)
         if form.is_valid():
-            cli = form.cleaned_data
-            cliente = Cliente(cliente=cli["cliente"], direccion=cli["direccion"], pedido=cli["pedido"],estado=cli["estado"])
-            cliente.save()
-            return render (request, 'AppMaster/exitoso.html', {"mensaje": "CLIENTE CREADO CORRECTAMENTE!!"})
+            usu = form.cleaned_data
+            usuario = Usuario(usuario=usu["Usuario"], direccion=cli["direccion"], pedido=cli["pedido"],estado=cli["estado"])
+            usuario.save()
+            return render (request, 'AppMaster/exitoso.html', {"mensaje": "Usuario CREADO CORRECTAMENTE!!"})
     else:
-        formulario=CliForm()
+        formulario=UsuForm()
     
-    return render (request, 'AppMaster/cliente.html', {'form':formulario})
+    return render (request, 'AppMaster/usuario.html', {'form':formulario})
 
 # Modulos de buquedas de clinetes en la base de datos
 def busquedaCliente(request):
