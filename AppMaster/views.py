@@ -35,7 +35,7 @@ def aboutme(request):
 # Modulo pagina usuario
 #@login_required
 def usuario(request):
-    return render (request, "AppMaster/usuario.html")
+    return render (request, "AppMaster/usuario.html",context)
 
 # Modulo mensaje exitoso
 def exitoso(request):

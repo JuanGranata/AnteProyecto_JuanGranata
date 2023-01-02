@@ -23,5 +23,5 @@ urlpatterns = [
     #path('usuario/nuevo/', UsuarioCreacion.as_view(), name='estudiante_crear'),
     path('usuario/editar/<pk>', UsuarioUpdate.as_view(), name='usuario_editar'),
     path('usuario/borrar/<pk>', UsuarioDelete.as_view(), name='usuario_borrar'),
-    path('usuario/<pk>', UsuarioDetalle.as_view(), name='usuario_detalle'),    
+    path('usuario/detalle/<pk>', UsuarioDetalle.as_view(), name='usuario_detalle'),    
 ]
