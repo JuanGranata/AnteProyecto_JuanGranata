@@ -3,13 +3,13 @@
 {% load static %}
 
 {% block titulo %}
-<h2>Formulario de Busqueda de Cliente <br> </h2>
+<h2>Busqueda de Usuario <br> </h2>
 
 <form action="{% url 'buscar' %}" method="GET"> 
 
-    <input title="Nombre Cliente" type="text" name="cliente" id="cliente">
+    <input title="Nombre Usuario" type="text" name="user" id="user">
 
-    <input type="submit" value="buscar cliente">
+    <input type="submit" value="buscar">
 
 </form>
 {{ mensaje }}
